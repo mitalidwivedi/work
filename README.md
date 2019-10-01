@@ -167,7 +167,7 @@ Custom contexts aren't really needed for trivial example applications, but are v
 
 ### Check-ins
 
-Since this is a background job processing library, it's fairly common to have jobs that that take a long time to execute. Imagine you have a job that takes an hour to run. It can often be frustrating to know if it's hung, or about to finish, or if it has 30 more minutes to go.
+Since this is a background job processing library, it's fairly common to have jobs that take a long time to execute. Imagine you have a job that takes an hour to run. It can often be frustrating to know if it's hung, or about to finish, or if it has 30 more minutes to go.
 
 To solve this, you can instrument your jobs to "checkin" every so often with a string message. This checkin status will show up in the web UI. For instance, your job could look like this:
 
@@ -308,7 +308,7 @@ You'll see a view that looks like this:
 
 ### The reaper
 
-* If a process crashes hard (eg, the power on the server turns off or the kernal freezes), some jobs may be in progress and we won't want to lose them. They're safe in their in-progress queue.
+* If a process crashes hard (eg, the power on the server turns off or the kernel freezes), some jobs may be in progress and we won't want to lose them. They're safe in their in-progress queue.
 * The reaper will look for worker pools without a heartbeat. It will scan their in-progress queues and requeue anything it finds.
 
 ### Unique jobs
